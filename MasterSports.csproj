@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C18D5E6-EE56-4CBD-96C0-3A01064CA88E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterSports</RootNamespace>
+    <AssemblyName>MasterSports</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\classcategoria.cs" />
+    <Compile Include="Classes\classcliente.cs" />
+    <Compile Include="Classes\classconexao.cs" />
+    <Compile Include="Classes\classfuncionario.cs" />
+    <Compile Include="Classes\classmarca.cs" />
+    <Compile Include="Classes\classproduto.cs" />
+    <Compile Include="Classes\classvenda.cs" />
+    <Compile Include="Classes\classitem.cs" />
+    <Compile Include="Classes\classrelvenda.cs" />
+    <Compile Include="fmrCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCategoria.Designer.cs">
+      <DependentUpon>fmrCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCliente.Designer.cs">
+      <DependentUpon>fmrCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrelvenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrelvenda.Designer.cs">
+      <DependentUpon>fmrelvenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrfuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrfuncionario.Designer.cs">
+      <DependentUpon>fmrfuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrmarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrmarca.Designer.cs">
+      <DependentUpon>fmrmarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrPrincipal.Designer.cs">
+      <DependentUpon>fmrPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrproduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrproduto.Designer.cs">
+      <DependentUpon>fmrproduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formconscliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formconscliente.Designer.cs">
+      <DependentUpon>Formconscliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formconsfuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formconsfuncionario.Designer.cs">
+      <DependentUpon>Formconsfuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formconsproduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formconsproduto.Designer.cs">
+      <DependentUpon>Formconsproduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formconsulcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formconsulcategoria.Designer.cs">
+      <DependentUpon>Formconsulcategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formconsulmarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formconsulmarca.Designer.cs">
+      <DependentUpon>Formconsulmarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formrelfuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formrelfuncionario.Designer.cs">
+      <DependentUpon>formrelfuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrelatoriocliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrelatoriocliente.Designer.cs">
+      <DependentUpon>frmrelatoriocliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrelatorioproduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrelatorioproduto.Designer.cs">
+      <DependentUpon>frmrelatorioproduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrelcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrelcategoria.Designer.cs">
+      <DependentUpon>frmrelcategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrelmarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrelmarca.Designer.cs">
+      <DependentUpon>frmrelmarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenda.Designer.cs">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmrCategoria.resx">
+      <DependentUpon>fmrCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrCliente.resx">
+      <DependentUpon>fmrCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrelvenda.resx">
+      <DependentUpon>fmrelvenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrfuncionario.resx">
+      <DependentUpon>fmrfuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrmarca.resx">
+      <DependentUpon>fmrmarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrPrincipal.resx">
+      <DependentUpon>fmrPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrproduto.resx">
+      <DependentUpon>fmrproduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formconscliente.resx">
+      <DependentUpon>Formconscliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formconsfuncionario.resx">
+      <DependentUpon>Formconsfuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formconsproduto.resx">
+      <DependentUpon>Formconsproduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formconsulcategoria.resx">
+      <DependentUpon>Formconsulcategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formconsulmarca.resx">
+      <DependentUpon>Formconsulmarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formrelfuncionario.resx">
+      <DependentUpon>formrelfuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrelatoriocliente.resx">
+      <DependentUpon>frmrelatoriocliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrelatorioproduto.resx">
+      <DependentUpon>frmrelatorioproduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrelcategoria.resx">
+      <DependentUpon>frmrelcategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrelmarca.resx">
+      <DependentUpon>frmrelmarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVenda.resx">
+      <DependentUpon>frmVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrCategoria.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrCliente.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrfuncionario.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrmarca.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrPrincipal.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.fmrproduto.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.Formconscliente.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.Formconsproduto.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.frmrelatoriocliente.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.frmrelatorioproduto.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.frmrelcategoria.resources" />
+    <EmbeddedResource Include="obj\Debug\MasterSports.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rptcategoria.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rptcliente.rdlc" />
+    <EmbeddedResource Include="rptproduto.rdlc" />
+    <EmbeddedResource Include="rptrelfuncionario.rdlc" />
+    <EmbeddedResource Include="rptrelmarca.rdlc" />
+    <EmbeddedResource Include="rptrelvenda.rdlc" />
+    <None Include="bin\Debug\MasterSports.exe.config" />
+    <None Include="bin\Debug\MasterSports.vshost.exe.config" />
+    <None Include="bin\Debug\MasterSports.vshost.exe.manifest" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MasterSports.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\MasterSports.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\RdlCompile.cache" />
+    <None Include="obj\Debug\RdlCompile.compiled" />
+    <None Include="Properties\DataSources\classcategoria.datasource" />
+    <None Include="Properties\DataSources\classcliente.datasource" />
+    <None Include="Properties\DataSources\classfuncionario.datasource" />
+    <None Include="Properties\DataSources\classmarca.datasource" />
+    <None Include="Properties\DataSources\classproduto.datasource" />
+    <None Include="Properties\DataSources\classrelvenda.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\de\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\MasterSports.exe" />
+    <Content Include="bin\Debug\MasterSports.pdb" />
+    <Content Include="bin\Debug\MasterSports.vshost.exe" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\Debug\Microsoft.SqlServer.Types.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll" />
+    <Content Include="DB\mastersports.sql" />
+    <Content Include="obj\Debug\MasterSports.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MasterSports.exe" />
+    <Content Include="obj\Debug\MasterSports.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
